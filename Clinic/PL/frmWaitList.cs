@@ -14,9 +14,11 @@ namespace Clinic.PL
     {
         CLS_RecordWait wait = new CLS_RecordWait();
         DataTable dt;
-        public frmWaitList()
+        bool State;
+        public frmWaitList(bool state)
         {
             InitializeComponent();
+            this.State = state;
             RefreshTable();            
             dgvWait.Columns[0].HeaderText = "الرقم";
             dgvWait.Columns[0].Visible = false;
@@ -30,6 +32,14 @@ namespace Clinic.PL
             dgvWait.Columns[7].HeaderText = "توقيت الموعد ";
             dgvWait.Columns[8].HeaderText = "تاريخ الموعد ";
             dgvWait.Columns[9].HeaderText = "ملاحظات";
+            if (State)
+            {
+                btnPriveue.Visible = true;
+            }
+            else
+            {
+                btnPriveue.Visible = false;
+            }
         }
 
         public void RefreshTable()

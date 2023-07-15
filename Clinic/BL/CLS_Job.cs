@@ -18,14 +18,28 @@ namespace Clinic.BL
             return dt;
         }
 
-        public void AddJob(int N, string Mhnapation)
+        public void AddJob(string Mhnapation)
         {
-            SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("@N", SqlDbType.Int);
-            param[0].Value = N;
+            SqlParameter[] param = new SqlParameter[1];          
 
-            param[1] = new SqlParameter("@Mhnapation", SqlDbType.NVarChar, 15);
-            param[1].Value = Mhnapation;
+            param[0] = new SqlParameter("@Mhnapation", SqlDbType.NVarChar, 15);
+            param[0].Value = Mhnapation;
+
+            dal.Open();
+            dal.ExecuteCommand("AddJob", param);
+            dal.Close();
+        }
+
+        public DataTable VerifiyJob(string Job)
+        {
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@Mhnapation", SqlDbType.NVarChar, 30);
+            param[0].Value = Job;            
+
+            dal.Open();
+            DataTable dt = dal.SelectData("VerifiyJob", param);
+            dal.Close();
+            return dt;
         }
     }
 }

@@ -45,13 +45,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label34 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comLastMenstruation = new System.Windows.Forms.ComboBox();
@@ -76,9 +75,9 @@
             this.txtBloodPressure = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comPreviousIllnesses = new System.Windows.Forms.ComboBox();
-            this.comBirthStories = new System.Windows.Forms.ComboBox();
-            this.comSurgicalHistory = new System.Windows.Forms.ComboBox();
+            this.txtPreviousIllnesses = new System.Windows.Forms.TextBox();
+            this.txtSurgicalHistory = new System.Windows.Forms.TextBox();
+            this.txtBirthStories = new System.Windows.Forms.TextBox();
             this.txtDeadFemales = new System.Windows.Forms.TextBox();
             this.txtLiveFemales = new System.Windows.Forms.TextBox();
             this.txtLastPregnancy = new System.Windows.Forms.TextBox();
@@ -103,8 +102,8 @@
             this.txtDateMarriage = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comJob = new System.Windows.Forms.ComboBox();
-            this.comBload = new System.Windows.Forms.ComboBox();
+            this.txtJob = new System.Windows.Forms.TextBox();
+            this.txtBload = new System.Windows.Forms.TextBox();
             this.txtPuberty = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -118,8 +117,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comHusbandJob = new System.Windows.Forms.ComboBox();
-            this.comHusbandBload = new System.Windows.Forms.ComboBox();
+            this.txtHusbandJob = new System.Windows.Forms.TextBox();
+            this.txtHusbandBload = new System.Windows.Forms.TextBox();
             this.txtHusbandName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtHusbandAge = new System.Windows.Forms.TextBox();
@@ -128,7 +127,32 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsBtnWait = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsBtnAdd = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.pic1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
@@ -142,7 +166,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -152,6 +176,7 @@
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -269,11 +294,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pic1);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.panel6);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -324,22 +349,13 @@
             this.button3.Text = "حجم الفيديو";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(323, 298);
-            this.panel6.TabIndex = 0;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.label34);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.button7);
-            this.tabPage2.Controls.Add(this.pictureBox1);
+            this.tabPage2.Controls.Add(this.pic);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -387,14 +403,15 @@
             this.button7.Text = "التالي";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pic
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 298);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pic.Location = new System.Drawing.Point(3, 3);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(323, 298);
+            this.pic.TabIndex = 0;
+            this.pic.TabStop = false;
             // 
             // panel4
             // 
@@ -658,9 +675,9 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.comPreviousIllnesses);
-            this.groupBox3.Controls.Add(this.comBirthStories);
-            this.groupBox3.Controls.Add(this.comSurgicalHistory);
+            this.groupBox3.Controls.Add(this.txtPreviousIllnesses);
+            this.groupBox3.Controls.Add(this.txtSurgicalHistory);
+            this.groupBox3.Controls.Add(this.txtBirthStories);
             this.groupBox3.Controls.Add(this.txtDeadFemales);
             this.groupBox3.Controls.Add(this.txtLiveFemales);
             this.groupBox3.Controls.Add(this.txtLastPregnancy);
@@ -694,32 +711,44 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
-            // comPreviousIllnesses
+            // txtPreviousIllnesses
             // 
-            this.comPreviousIllnesses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comPreviousIllnesses.FormattingEnabled = true;
-            this.comPreviousIllnesses.Location = new System.Drawing.Point(2, 65);
-            this.comPreviousIllnesses.Name = "comPreviousIllnesses";
-            this.comPreviousIllnesses.Size = new System.Drawing.Size(103, 23);
-            this.comPreviousIllnesses.TabIndex = 7;
+            this.txtPreviousIllnesses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPreviousIllnesses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPreviousIllnesses.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreviousIllnesses.ForeColor = System.Drawing.Color.Black;
+            this.txtPreviousIllnesses.Location = new System.Drawing.Point(3, 65);
+            this.txtPreviousIllnesses.Name = "txtPreviousIllnesses";
+            this.txtPreviousIllnesses.ReadOnly = true;
+            this.txtPreviousIllnesses.Size = new System.Drawing.Size(96, 23);
+            this.txtPreviousIllnesses.TabIndex = 24;
+            this.txtPreviousIllnesses.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // comBirthStories
+            // txtSurgicalHistory
             // 
-            this.comBirthStories.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comBirthStories.FormattingEnabled = true;
-            this.comBirthStories.Location = new System.Drawing.Point(344, 65);
-            this.comBirthStories.Name = "comBirthStories";
-            this.comBirthStories.Size = new System.Drawing.Size(103, 23);
-            this.comBirthStories.TabIndex = 7;
+            this.txtSurgicalHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSurgicalHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSurgicalHistory.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurgicalHistory.ForeColor = System.Drawing.Color.Black;
+            this.txtSurgicalHistory.Location = new System.Drawing.Point(179, 65);
+            this.txtSurgicalHistory.Name = "txtSurgicalHistory";
+            this.txtSurgicalHistory.ReadOnly = true;
+            this.txtSurgicalHistory.Size = new System.Drawing.Size(92, 23);
+            this.txtSurgicalHistory.TabIndex = 23;
+            this.txtSurgicalHistory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // comSurgicalHistory
+            // txtBirthStories
             // 
-            this.comSurgicalHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comSurgicalHistory.FormattingEnabled = true;
-            this.comSurgicalHistory.Location = new System.Drawing.Point(170, 65);
-            this.comSurgicalHistory.Name = "comSurgicalHistory";
-            this.comSurgicalHistory.Size = new System.Drawing.Size(103, 23);
-            this.comSurgicalHistory.TabIndex = 7;
+            this.txtBirthStories.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBirthStories.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBirthStories.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthStories.ForeColor = System.Drawing.Color.Black;
+            this.txtBirthStories.Location = new System.Drawing.Point(350, 65);
+            this.txtBirthStories.Name = "txtBirthStories";
+            this.txtBirthStories.ReadOnly = true;
+            this.txtBirthStories.Size = new System.Drawing.Size(91, 23);
+            this.txtBirthStories.TabIndex = 22;
+            this.txtBirthStories.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDeadFemales
             // 
@@ -729,6 +758,7 @@
             this.txtDeadFemales.ForeColor = System.Drawing.Color.Black;
             this.txtDeadFemales.Location = new System.Drawing.Point(3, 38);
             this.txtDeadFemales.Name = "txtDeadFemales";
+            this.txtDeadFemales.ReadOnly = true;
             this.txtDeadFemales.Size = new System.Drawing.Size(33, 23);
             this.txtDeadFemales.TabIndex = 20;
             this.txtDeadFemales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -741,6 +771,7 @@
             this.txtLiveFemales.ForeColor = System.Drawing.Color.Black;
             this.txtLiveFemales.Location = new System.Drawing.Point(190, 38);
             this.txtLiveFemales.Name = "txtLiveFemales";
+            this.txtLiveFemales.ReadOnly = true;
             this.txtLiveFemales.Size = new System.Drawing.Size(33, 23);
             this.txtLiveFemales.TabIndex = 18;
             this.txtLiveFemales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -753,6 +784,7 @@
             this.txtLastPregnancy.ForeColor = System.Drawing.Color.Black;
             this.txtLastPregnancy.Location = new System.Drawing.Point(373, 38);
             this.txtLastPregnancy.Name = "txtLastPregnancy";
+            this.txtLastPregnancy.ReadOnly = true;
             this.txtLastPregnancy.Size = new System.Drawing.Size(90, 23);
             this.txtLastPregnancy.TabIndex = 14;
             this.txtLastPregnancy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -775,6 +807,7 @@
             this.txtPregnancies.ForeColor = System.Drawing.Color.Black;
             this.txtPregnancies.Location = new System.Drawing.Point(83, 9);
             this.txtPregnancies.Name = "txtPregnancies";
+            this.txtPregnancies.ReadOnly = true;
             this.txtPregnancies.Size = new System.Drawing.Size(33, 23);
             this.txtPregnancies.TabIndex = 15;
             this.txtPregnancies.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -787,6 +820,7 @@
             this.txtAbortions.ForeColor = System.Drawing.Color.Black;
             this.txtAbortions.Location = new System.Drawing.Point(3, 9);
             this.txtAbortions.Name = "txtAbortions";
+            this.txtAbortions.ReadOnly = true;
             this.txtAbortions.Size = new System.Drawing.Size(33, 23);
             this.txtAbortions.TabIndex = 16;
             this.txtAbortions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -799,6 +833,7 @@
             this.txtCaesarean.ForeColor = System.Drawing.Color.Black;
             this.txtCaesarean.Location = new System.Drawing.Point(175, 9);
             this.txtCaesarean.Name = "txtCaesarean";
+            this.txtCaesarean.ReadOnly = true;
             this.txtCaesarean.Size = new System.Drawing.Size(33, 23);
             this.txtCaesarean.TabIndex = 21;
             this.txtCaesarean.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -811,6 +846,7 @@
             this.txtBirths.ForeColor = System.Drawing.Color.Black;
             this.txtBirths.Location = new System.Drawing.Point(282, 9);
             this.txtBirths.Name = "txtBirths";
+            this.txtBirths.ReadOnly = true;
             this.txtBirths.Size = new System.Drawing.Size(33, 23);
             this.txtBirths.TabIndex = 13;
             this.txtBirths.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -819,7 +855,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(105, 69);
+            this.label9.Location = new System.Drawing.Point(107, 69);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 15);
             this.label9.TabIndex = 0;
@@ -853,6 +889,7 @@
             this.txtDeadMales.ForeColor = System.Drawing.Color.Black;
             this.txtDeadMales.Location = new System.Drawing.Point(95, 38);
             this.txtDeadMales.Name = "txtDeadMales";
+            this.txtDeadMales.ReadOnly = true;
             this.txtDeadMales.Size = new System.Drawing.Size(33, 23);
             this.txtDeadMales.TabIndex = 19;
             this.txtDeadMales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -861,7 +898,7 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(273, 69);
+            this.label14.Location = new System.Drawing.Point(275, 69);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(71, 15);
             this.label14.TabIndex = 0;
@@ -875,6 +912,7 @@
             this.txtLiveMales.ForeColor = System.Drawing.Color.Black;
             this.txtLiveMales.Location = new System.Drawing.Point(280, 38);
             this.txtLiveMales.Name = "txtLiveMales";
+            this.txtLiveMales.ReadOnly = true;
             this.txtLiveMales.Size = new System.Drawing.Size(33, 23);
             this.txtLiveMales.TabIndex = 17;
             this.txtLiveMales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -943,7 +981,7 @@
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(447, 69);
+            this.label17.Location = new System.Drawing.Point(445, 69);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(63, 15);
             this.label17.TabIndex = 0;
@@ -957,6 +995,7 @@
             this.txtDateMarriage.ForeColor = System.Drawing.Color.Black;
             this.txtDateMarriage.Location = new System.Drawing.Point(359, 9);
             this.txtDateMarriage.Name = "txtDateMarriage";
+            this.txtDateMarriage.ReadOnly = true;
             this.txtDateMarriage.Size = new System.Drawing.Size(90, 23);
             this.txtDateMarriage.TabIndex = 12;
             this.txtDateMarriage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -974,8 +1013,8 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.comJob);
-            this.groupBox1.Controls.Add(this.comBload);
+            this.groupBox1.Controls.Add(this.txtJob);
+            this.groupBox1.Controls.Add(this.txtBload);
             this.groupBox1.Controls.Add(this.txtPuberty);
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.txtName);
@@ -998,23 +1037,32 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // comJob
+            // txtJob
             // 
-            this.comJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comJob.FormattingEnabled = true;
-            this.comJob.Location = new System.Drawing.Point(177, 66);
-            this.comJob.Name = "comJob";
-            this.comJob.Size = new System.Drawing.Size(103, 23);
-            this.comJob.TabIndex = 7;
+            this.txtJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtJob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJob.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJob.ForeColor = System.Drawing.Color.Black;
+            this.txtJob.Location = new System.Drawing.Point(173, 69);
+            this.txtJob.Name = "txtJob";
+            this.txtJob.ReadOnly = true;
+            this.txtJob.Size = new System.Drawing.Size(106, 23);
+            this.txtJob.TabIndex = 9;
+            this.txtJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // comBload
+            // txtBload
             // 
-            this.comBload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comBload.FormattingEnabled = true;
-            this.comBload.Location = new System.Drawing.Point(6, 39);
-            this.comBload.Name = "comBload";
-            this.comBload.Size = new System.Drawing.Size(50, 23);
-            this.comBload.TabIndex = 7;
+            this.txtBload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBload.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBload.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBload.ForeColor = System.Drawing.Color.Black;
+            this.txtBload.Location = new System.Drawing.Point(6, 38);
+            this.txtBload.Name = "txtBload";
+            this.txtBload.ReadOnly = true;
+            this.txtBload.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBload.Size = new System.Drawing.Size(49, 23);
+            this.txtBload.TabIndex = 8;
+            this.txtBload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPuberty
             // 
@@ -1022,8 +1070,9 @@
             this.txtPuberty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPuberty.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPuberty.ForeColor = System.Drawing.Color.Black;
-            this.txtPuberty.Location = new System.Drawing.Point(139, 39);
+            this.txtPuberty.Location = new System.Drawing.Point(139, 38);
             this.txtPuberty.Name = "txtPuberty";
+            this.txtPuberty.ReadOnly = true;
             this.txtPuberty.Size = new System.Drawing.Size(39, 23);
             this.txtPuberty.TabIndex = 4;
             this.txtPuberty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1034,8 +1083,9 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.Black;
-            this.txtPhone.Location = new System.Drawing.Point(6, 66);
+            this.txtPhone.Location = new System.Drawing.Point(6, 69);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(103, 23);
             this.txtPhone.TabIndex = 7;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1048,6 +1098,7 @@
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(6, 11);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(115, 23);
             this.txtName.TabIndex = 2;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1056,7 +1107,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(61, 43);
+            this.label5.Location = new System.Drawing.Point(61, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 0;
@@ -1066,7 +1117,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(183, 43);
+            this.label4.Location = new System.Drawing.Point(183, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 15);
             this.label4.TabIndex = 0;
@@ -1076,7 +1127,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(113, 70);
+            this.label7.Location = new System.Drawing.Point(113, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 15);
             this.label7.TabIndex = 0;
@@ -1088,8 +1139,9 @@
             this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAge.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.ForeColor = System.Drawing.Color.Black;
-            this.txtAge.Location = new System.Drawing.Point(245, 39);
+            this.txtAge.Location = new System.Drawing.Point(245, 38);
             this.txtAge.Name = "txtAge";
+            this.txtAge.ReadOnly = true;
             this.txtAge.Size = new System.Drawing.Size(39, 23);
             this.txtAge.TabIndex = 3;
             this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1108,7 +1160,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(289, 43);
+            this.label3.Location = new System.Drawing.Point(289, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 15);
             this.label3.TabIndex = 0;
@@ -1118,7 +1170,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 70);
+            this.label6.Location = new System.Drawing.Point(285, 73);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 15);
             this.label6.TabIndex = 0;
@@ -1132,6 +1184,7 @@
             this.txtId.ForeColor = System.Drawing.Color.Black;
             this.txtId.Location = new System.Drawing.Point(191, 11);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(65, 23);
             this.txtId.TabIndex = 1;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1149,8 +1202,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.comHusbandJob);
-            this.groupBox2.Controls.Add(this.comHusbandBload);
+            this.groupBox2.Controls.Add(this.txtHusbandJob);
+            this.groupBox2.Controls.Add(this.txtHusbandBload);
             this.groupBox2.Controls.Add(this.txtHusbandName);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtHusbandAge);
@@ -1167,23 +1220,29 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // comHusbandJob
+            // txtHusbandJob
             // 
-            this.comHusbandJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comHusbandJob.FormattingEnabled = true;
-            this.comHusbandJob.Location = new System.Drawing.Point(3, 66);
-            this.comHusbandJob.Name = "comHusbandJob";
-            this.comHusbandJob.Size = new System.Drawing.Size(139, 23);
-            this.comHusbandJob.TabIndex = 7;
+            this.txtHusbandJob.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHusbandJob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHusbandJob.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHusbandJob.ForeColor = System.Drawing.Color.Black;
+            this.txtHusbandJob.Location = new System.Drawing.Point(3, 68);
+            this.txtHusbandJob.Name = "txtHusbandJob";
+            this.txtHusbandJob.ReadOnly = true;
+            this.txtHusbandJob.Size = new System.Drawing.Size(140, 23);
+            this.txtHusbandJob.TabIndex = 14;
+            this.txtHusbandJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // comHusbandBload
+            // txtHusbandBload
             // 
-            this.comHusbandBload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comHusbandBload.FormattingEnabled = true;
-            this.comHusbandBload.Location = new System.Drawing.Point(3, 39);
-            this.comHusbandBload.Name = "comHusbandBload";
-            this.comHusbandBload.Size = new System.Drawing.Size(53, 23);
-            this.comHusbandBload.TabIndex = 11;
+            this.txtHusbandBload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHusbandBload.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHusbandBload.Location = new System.Drawing.Point(3, 39);
+            this.txtHusbandBload.Name = "txtHusbandBload";
+            this.txtHusbandBload.ReadOnly = true;
+            this.txtHusbandBload.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtHusbandBload.Size = new System.Drawing.Size(54, 22);
+            this.txtHusbandBload.TabIndex = 13;
             // 
             // txtHusbandName
             // 
@@ -1193,10 +1252,10 @@
             this.txtHusbandName.ForeColor = System.Drawing.Color.Black;
             this.txtHusbandName.Location = new System.Drawing.Point(3, 11);
             this.txtHusbandName.Name = "txtHusbandName";
+            this.txtHusbandName.ReadOnly = true;
             this.txtHusbandName.Size = new System.Drawing.Size(103, 23);
             this.txtHusbandName.TabIndex = 8;
             this.txtHusbandName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtHusbandName.TextChanged += new System.EventHandler(this.txtHusbandName_TextChanged);
             // 
             // label8
             // 
@@ -1216,6 +1275,7 @@
             this.txtHusbandAge.ForeColor = System.Drawing.Color.Black;
             this.txtHusbandAge.Location = new System.Drawing.Point(107, 39);
             this.txtHusbandAge.Name = "txtHusbandAge";
+            this.txtHusbandAge.ReadOnly = true;
             this.txtHusbandAge.Size = new System.Drawing.Size(39, 23);
             this.txtHusbandAge.TabIndex = 9;
             this.txtHusbandAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1244,7 +1304,7 @@
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(149, 70);
+            this.label13.Location = new System.Drawing.Point(149, 72);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 15);
             this.label13.TabIndex = 0;
@@ -1263,22 +1323,249 @@
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.toolStripSeparator13,
+            this.tsBtnWait,
+            this.toolStripSeparator1,
+            this.tsBtnAdd,
+            this.toolStripSeparator12,
+            this.toolStripButton11,
+            this.toolStripSeparator11,
+            this.toolStripButton9,
+            this.toolStripSeparator10,
+            this.toolStripButton8,
+            this.toolStripSeparator9,
+            this.toolStripButton7,
+            this.toolStripSeparator8,
+            this.toolStripButton6,
+            this.toolStripSeparator7,
+            this.toolStripButton5,
+            this.toolStripSeparator6,
+            this.toolStripButton4,
+            this.toolStripSeparator5,
+            this.toolStripButton3,
+            this.toolStripSeparator4,
+            this.toolStripButton2,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripSeparator2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(1018, 68);
-            this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 68);
+            // 
+            // tsBtnWait
+            // 
+            this.tsBtnWait.Image = global::Clinic.Properties.Resources._11;
+            this.tsBtnWait.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tsBtnWait.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsBtnWait.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnWait.Name = "tsBtnWait";
+            this.tsBtnWait.Size = new System.Drawing.Size(74, 65);
+            this.tsBtnWait.Text = "لائحة الانتظار";
+            this.tsBtnWait.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsBtnWait.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsBtnWait.Click += new System.EventHandler(this.tsBtnWait_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 68);
+            // 
+            // tsBtnAdd
+            // 
+            this.tsBtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsBtnAdd.Image")));
+            this.tsBtnAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tsBtnAdd.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsBtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtnAdd.Name = "tsBtnAdd";
+            this.tsBtnAdd.RightToLeftAutoMirrorImage = true;
+            this.tsBtnAdd.Size = new System.Drawing.Size(73, 65);
+            this.tsBtnAdd.Text = "إضافة بطاقة";
+            this.tsBtnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tsBtnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsBtnAdd.Click += new System.EventHandler(this.tsBtnAdd_Click);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.Image = global::Clinic.Properties.Resources._17;
+            this.toolStripButton11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton11.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(44, 65);
+            this.toolStripButton11.Text = "بحث ";
+            this.toolStripButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton9.Text = "لائحة الانتظار";
+            this.toolStripButton9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton8.Text = "لائحة الانتظار";
+            this.toolStripButton8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton7.Text = "لائحة الانتظار";
+            this.toolStripButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton6.Text = "لائحة الانتظار";
+            this.toolStripButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton5.Text = "لائحة الانتظار";
+            this.toolStripButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton4.Text = "لائحة الانتظار";
+            this.toolStripButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton3.Text = "لائحة الانتظار";
+            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 68);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton2.Text = "لائحة الانتظار";
+            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 68);
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 65);
-            this.toolStripButton1.Text = "لائحة الدور";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolStripButton1.Size = new System.Drawing.Size(74, 65);
+            this.toolStripButton1.Text = "لائحة الانتظار";
+            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 68);
+            // 
+            // pic1
+            // 
+            this.pic1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pic1.Location = new System.Drawing.Point(3, 3);
+            this.pic1.Name = "pic1";
+            this.pic1.Size = new System.Drawing.Size(323, 312);
+            this.pic1.TabIndex = 6;
+            this.pic1.TabStop = false;
             // 
             // frmDoctor
             // 
@@ -1294,6 +1581,8 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الطبيب";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDoctor_FormClosing);
+            this.Load += new System.EventHandler(this.frmDoctor_Load);
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
@@ -1308,7 +1597,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.panel4.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1324,6 +1613,7 @@
             this.panel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1346,13 +1636,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox comLastMenstruation;
@@ -1377,9 +1666,6 @@
         private System.Windows.Forms.TextBox txtBloodPressure;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comPreviousIllnesses;
-        private System.Windows.Forms.ComboBox comBirthStories;
-        private System.Windows.Forms.ComboBox comSurgicalHistory;
         private System.Windows.Forms.TextBox txtDeadFemales;
         private System.Windows.Forms.TextBox txtLiveFemales;
         private System.Windows.Forms.TextBox txtLastPregnancy;
@@ -1404,8 +1690,6 @@
         private System.Windows.Forms.TextBox txtDateMarriage;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comJob;
-        private System.Windows.Forms.ComboBox comBload;
         private System.Windows.Forms.TextBox txtPuberty;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtName;
@@ -1419,8 +1703,6 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comHusbandJob;
-        private System.Windows.Forms.ComboBox comHusbandBload;
         private System.Windows.Forms.TextBox txtHusbandName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtHusbandAge;
@@ -1429,6 +1711,38 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsBtnWait;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripButton tsBtnAdd;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.TextBox txtBload;
+        private System.Windows.Forms.TextBox txtHusbandBload;
+        private System.Windows.Forms.TextBox txtJob;
+        private System.Windows.Forms.TextBox txtHusbandJob;
+        private System.Windows.Forms.TextBox txtBirthStories;
+        private System.Windows.Forms.TextBox txtSurgicalHistory;
+        private System.Windows.Forms.TextBox txtPreviousIllnesses;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
+        private System.Windows.Forms.PictureBox pic1;
     }
 }

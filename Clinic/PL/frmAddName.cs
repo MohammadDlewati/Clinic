@@ -15,31 +15,30 @@ namespace Clinic.PL
         CLS_Name nam = new CLS_Name();
         CLS_Job job = new CLS_Job();
         CLS_Job_Husbend jobh = new CLS_Job_Husbend();
-        DataTable dt, dtH,dtName;
+        DataTable dtJob, dtJobH,dtName;
         string state;
         public frmAddName()
         {
             InitializeComponent();
             state = "Add";
-            dt = job.AllJob();
+            dtJob = job.AllJob();
 
             lblCountRecored.Text = nam.CountName().ToString();
 
-            comJob.DataSource = dt;
+            comJob.DataSource = dtJob;
             comJob.DisplayMember = "Mhnapation";
-            comJob.ValueMember = "N";            
+            comJob.ValueMember = "N";
 
-            dtH = jobh.AllJob();
-            comHusbandJob.DataSource = dtH;
+            dtJobH = jobh.AllJob();
+            comHusbandJob.DataSource = dtJobH;
             comHusbandJob.DisplayMember = "Mhnahazp";
             comHusbandJob.ValueMember = "N";
         }
 
-
         public frmAddName(int N)
         {
             InitializeComponent();
-
+            
             state = "Edit";
             lblCountRecored.Text = nam.CountName().ToString();
             this.Text = " تعديل بطاقة";
@@ -70,15 +69,41 @@ namespace Clinic.PL
             txtCaesarean.Text = dtName.Rows[0]["KaysarN"].ToString();
             comPreviousIllnesses.Text = dtName.Rows[0]["Olddisease"].ToString();
 
-            dt = job.AllJob();
-            comJob.DataSource = dt;
+            dtJob = job.AllJob();
+            comJob.DataSource = dtJob;
             comJob.DisplayMember = "Mhnapation";
             comJob.ValueMember = "N";
 
-            dtH = jobh.AllJob();
-            comHusbandJob.DataSource = dtH;
+            dtJobH = jobh.AllJob();
+            comHusbandJob.DataSource = dtJobH;
             comHusbandJob.DisplayMember = "Mhnahazp";
             comHusbandJob.ValueMember = "N";
+        }
+        public void RefreshJob()
+        {
+            dtJob = job.AllJob();
+            comJob.DataSource = dtJob;
+        }
+
+        public void RefreshJobH()
+        {
+            dtJobH = jobh.AllJob();
+            comHusbandJob.DataSource = dtJobH;
+        }
+
+        public void Verifiy()
+        {
+            DataTable dtVerifiyJob = job.VerifiyJob(comJob.Text.Trim());
+            if (dtVerifiyJob.Rows[0][0].ToString().Equals("0"))
+            {
+                job.AddJob(comJob.Text);
+            }
+
+            DataTable dtVerifiyJobH = jobh.VerifiyJobHusband(comHusbandJob.Text.Trim());
+            if (dtVerifiyJobH.Rows[0][0].ToString().Equals("0"))
+            {
+                jobh.AddJob(comHusbandJob.Text);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -87,8 +112,8 @@ namespace Clinic.PL
             //{
                 if (state.Equals("Add"))
                 {
-                    DataTable dt = nam.VerifiyName(txtName.Text.Trim(), txtHusbandName.Text.Trim());
-                    if (dt.Rows[0][0].ToString().Equals("0"))
+                    DataTable dtVerifiyName = nam.VerifiyName(txtName.Text.Trim(), txtHusbandName.Text.Trim());
+                    if (dtVerifiyName.Rows[0][0].ToString().Equals("0"))
                     {
                         nam.AddName(
                             int.Parse(txtId.Text) ,
@@ -115,7 +140,7 @@ namespace Clinic.PL
                             comSurgicalHistory.Text,
                             txtCaesarean.Text,
                             comPreviousIllnesses.Text);
-
+                        Verifiy();
 
                         MessageBox.Show("تم الحفظ بنجاح....");
                         btnSave.Enabled = false;
@@ -151,6 +176,7 @@ namespace Clinic.PL
                                 comSurgicalHistory.Text,
                                 txtCaesarean.Text,
                                 comPreviousIllnesses.Text);
+                            Verifiy();
                             MessageBox.Show("تم الحفظ بنجاح....");
                             btnSave.Enabled = false;
                         }
@@ -185,8 +211,11 @@ namespace Clinic.PL
                         txtCaesarean.Text, 
                         comPreviousIllnesses.Text);
 
+                    Verifiy();
                     MessageBox.Show("تم التعديل بنجاح....");
                 }
+
+
             //}
             //catch (FormatException)
             //{
@@ -198,8 +227,6 @@ namespace Clinic.PL
         {
             comJob.Text = "";
             comHusbandJob.Text = "";
-
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -208,6 +235,8 @@ namespace Clinic.PL
             this.Text = " إضافة بطاقة";
             btnSave.Enabled = true;
             lblCountRecored.Text = nam.CountName().ToString();
+            RefreshJob();
+            RefreshJobH();
 
             txtId.Text = "";
             txtName.Text = "";
@@ -233,6 +262,8 @@ namespace Clinic.PL
             comSurgicalHistory.Text="";
             txtCaesarean.Text = "";
             comPreviousIllnesses.Text = "";
+
+            
 
         }
 

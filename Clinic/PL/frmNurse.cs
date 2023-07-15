@@ -115,7 +115,7 @@ namespace Clinic.PL
 
         private void btnWait_Click(object sender, EventArgs e)
         {
-            frmWaitList frm = new frmWaitList();
+            frmWaitList frm = new frmWaitList(false);
             frm.ShowDialog();
             //Application.OpenForms["frmWaitList"].Show();
         }
