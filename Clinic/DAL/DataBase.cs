@@ -9,7 +9,7 @@ namespace Clinic.DAL
 {
     class DataBase
     {
-        private String connectionString = @"Data Source=DESKTOP-PL6QQTF\SQLEXPRESS;Initial Catalog=test;Integrated Security=True";
+        private String connectionString = @"Data Source=PC\SQLEXPRESS;Initial Catalog=test;Integrated Security=True";
         private SqlConnection sqlConnection;
 
         public DataBase()

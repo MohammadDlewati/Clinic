@@ -15,7 +15,7 @@ namespace Clinic.PL
         CLS_Name nam = new CLS_Name();
         CLS_Job job = new CLS_Job();
         CLS_Job_Husbend jobh = new CLS_Job_Husbend();
-        DataTable dtJob, dtJobH,dtName;
+        DataTable dtJob, dtJobH, dtName;
         string state;
         public frmAddName()
         {
@@ -38,13 +38,13 @@ namespace Clinic.PL
         public frmAddName(int N)
         {
             InitializeComponent();
-            
+
             state = "Edit";
             lblCountRecored.Text = nam.CountName().ToString();
             this.Text = " تعديل بطاقة";
 
             dtName = nam.getName(N);
-            txtId.Text = dtName.Rows[0]["N"].ToString();
+         
             txtName.Text = dtName.Rows[0]["Name"].ToString();
             txtAge.Text = dtName.Rows[0]["Age"].ToString();
             comBload.Text = dtName.Rows[0]["Bload"].ToString();
@@ -110,110 +110,107 @@ namespace Clinic.PL
         {
             //try
             //{
-                if (state.Equals("Add"))
+            if (state.Equals("Add"))
+            {
+                DataTable dtVerifiyName = nam.VerifiyName(txtName.Text.Trim(), txtHusbandName.Text.Trim());
+                if (dtVerifiyName.Rows[0][0].ToString().Equals("0"))
                 {
-                    DataTable dtVerifiyName = nam.VerifiyName(txtName.Text.Trim(), txtHusbandName.Text.Trim());
-                    if (dtVerifiyName.Rows[0][0].ToString().Equals("0"))
-                    {
-                        nam.AddName(
-                            int.Parse(txtId.Text) ,
-                            txtName.Text,                             
-                            txtAge.Text,
-                            comBload.Text, 
-                            comHusbandBload.Text,
-                            txtPuberty.Text,
-                            comJob.Text,
-                            txtHusbandName.Text,
-                            txtHusbandAge.Text, 
-                            comHusbandJob.Text,                             
-                            txtPhone.Text,                           
-                            txtDateMarriage.Text,                            
-                            txtBirths.Text,
-                            txtLastPregnancy.Text,
-                            txtPregnancies.Text,
-                            txtAbortions.Text,
-                            txtLiveMales.Text,
-                            txtLiveFemales.Text, 
-                            txtDeadMales.Text, 
-                            txtDeadFemales.Text, 
-                            comBirthStories.Text,
-                            comSurgicalHistory.Text,
-                            txtCaesarean.Text,
-                            comPreviousIllnesses.Text);
-                        Verifiy();
-
-                        MessageBox.Show("تم الحفظ بنجاح....");
-                        btnSave.Enabled = false;
-                    }
-                    else
-                    {
-                        DialogResult result = MessageBox.Show("الاسم موجود, هل تريد إضافة بطاقة ثانية؟ ....","تنبيه",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-
-                        if (result == DialogResult.Yes)
-                        {
-                            nam.AddName(
-                                int.Parse(txtId.Text),
-                                txtName.Text,                               
-                                txtAge.Text,
-                                comBload.Text, 
-                                comHusbandBload.Text,
-                                txtPuberty.Text,
-                                comJob.Text,
-                                txtHusbandName.Text,
-                                txtHusbandAge.Text,
-                                comHusbandJob.Text,                               
-                                txtPhone.Text,                               
-                                txtDateMarriage.Text,                                
-                                txtBirths.Text,
-                                txtLastPregnancy.Text,
-                                txtPregnancies.Text,
-                                txtAbortions.Text,
-                                txtLiveMales.Text,
-                                txtLiveFemales.Text,
-                                txtDeadMales.Text,
-                                txtDeadFemales.Text,
-                                comBirthStories.Text,
-                                comSurgicalHistory.Text,
-                                txtCaesarean.Text,
-                                comPreviousIllnesses.Text);
-                            Verifiy();
-                            MessageBox.Show("تم الحفظ بنجاح....");
-                            btnSave.Enabled = false;
-                        }
-                    }
-                }
-
-                else
-                {
-                    nam.EditName(
-                        int.Parse(txtId.Text),
+                    nam.AddName(
                         txtName.Text,
                         txtAge.Text,
                         comBload.Text,
                         comHusbandBload.Text,
-                        txtPuberty.Text, 
-                        comJob.Text, 
+                        txtPuberty.Text,
+                        comJob.Text,
                         txtHusbandName.Text,
                         txtHusbandAge.Text,
-                        comHusbandJob.Text,  
+                        comHusbandJob.Text,
                         txtPhone.Text,
                         txtDateMarriage.Text,
                         txtBirths.Text,
                         txtLastPregnancy.Text,
                         txtPregnancies.Text,
-                        txtAbortions.Text, 
-                        txtLiveMales.Text, 
-                        txtLiveFemales.Text, 
+                        txtAbortions.Text,
+                        txtLiveMales.Text,
+                        txtLiveFemales.Text,
                         txtDeadMales.Text,
                         txtDeadFemales.Text,
                         comBirthStories.Text,
                         comSurgicalHistory.Text,
-                        txtCaesarean.Text, 
+                        txtCaesarean.Text,
                         comPreviousIllnesses.Text);
-
                     Verifiy();
-                    MessageBox.Show("تم التعديل بنجاح....");
+
+                    MessageBox.Show("تم الحفظ بنجاح....");
+                    btnSave.Enabled = false;
                 }
+                else
+                {
+                    DialogResult result = MessageBox.Show("الاسم موجود, هل تريد إضافة بطاقة ثانية؟ ....", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        nam.AddName(
+                            txtName.Text,
+                            txtAge.Text,
+                            comBload.Text,
+                            comHusbandBload.Text,
+                            txtPuberty.Text,
+                            comJob.Text,
+                            txtHusbandName.Text,
+                            txtHusbandAge.Text,
+                            comHusbandJob.Text,
+                            txtPhone.Text,
+                            txtDateMarriage.Text,
+                            txtBirths.Text,
+                            txtLastPregnancy.Text,
+                            txtPregnancies.Text,
+                            txtAbortions.Text,
+                            txtLiveMales.Text,
+                            txtLiveFemales.Text,
+                            txtDeadMales.Text,
+                            txtDeadFemales.Text,
+                            comBirthStories.Text,
+                            comSurgicalHistory.Text,
+                            txtCaesarean.Text,
+                            comPreviousIllnesses.Text);
+                        Verifiy();
+                        MessageBox.Show("تم الحفظ بنجاح....");
+                        btnSave.Enabled = false;
+                    }
+                }
+            }
+
+            else
+            {
+                nam.EditName(
+                    txtName.Text,
+                    txtAge.Text,
+                    comBload.Text,
+                    comHusbandBload.Text,
+                    txtPuberty.Text,
+                    comJob.Text,
+                    txtHusbandName.Text,
+                    txtHusbandAge.Text,
+                    comHusbandJob.Text,
+                    txtPhone.Text,
+                    txtDateMarriage.Text,
+                    txtBirths.Text,
+                    txtLastPregnancy.Text,
+                    txtPregnancies.Text,
+                    txtAbortions.Text,
+                    txtLiveMales.Text,
+                    txtLiveFemales.Text,
+                    txtDeadMales.Text,
+                    txtDeadFemales.Text,
+                    comBirthStories.Text,
+                    comSurgicalHistory.Text,
+                    txtCaesarean.Text,
+                    comPreviousIllnesses.Text);
+
+                Verifiy();
+                MessageBox.Show("تم التعديل بنجاح....");
+            }
 
 
             //}
@@ -238,32 +235,32 @@ namespace Clinic.PL
             RefreshJob();
             RefreshJobH();
 
-            txtId.Text = "";
+            
             txtName.Text = "";
-            txtAge.Text="";
-            comBload.Text="";
-            comHusbandBload.Text="";
-            txtPuberty.Text="";
-            comJob.Text="";
-            txtHusbandName.Text="";
-            txtHusbandAge.Text="";
-            comHusbandJob.Text= "";
-            txtPhone.Text= "";
-            txtDateMarriage.Text= "";
-            txtBirths.Text="";
-            txtLastPregnancy.Text="";
-            txtPregnancies.Text="";
-            txtAbortions.Text="";
-            txtLiveMales.Text="";
-            txtLiveFemales.Text="";
-            txtDeadMales.Text="";
-            txtDeadFemales.Text="";
-            comBirthStories.Text="";
-            comSurgicalHistory.Text="";
+            txtAge.Text = "";
+            comBload.Text = "";
+            comHusbandBload.Text = "";
+            txtPuberty.Text = "";
+            comJob.Text = "";
+            txtHusbandName.Text = "";
+            txtHusbandAge.Text = "";
+            comHusbandJob.Text = "";
+            txtPhone.Text = "";
+            txtDateMarriage.Text = "";
+            txtBirths.Text = "";
+            txtLastPregnancy.Text = "";
+            txtPregnancies.Text = "";
+            txtAbortions.Text = "";
+            txtLiveMales.Text = "";
+            txtLiveFemales.Text = "";
+            txtDeadMales.Text = "";
+            txtDeadFemales.Text = "";
+            comBirthStories.Text = "";
+            comSurgicalHistory.Text = "";
             txtCaesarean.Text = "";
             comPreviousIllnesses.Text = "";
 
-            
+
 
         }
 
@@ -272,6 +269,6 @@ namespace Clinic.PL
             this.Close();
         }
 
-       
+
     }
 }

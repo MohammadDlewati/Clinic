@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Clinic.BL;
+using AForge;
 using AForge.Video;
 using AForge.Video.DirectShow;
 
@@ -15,11 +16,15 @@ namespace Clinic.PL
     public partial class frmDoctor : Form
     {
         CLS_Name Nam = new CLS_Name();
+        CLS_GlobalKind proc = new CLS_GlobalKind();
+
         public FilterInfoCollection CamsCollection;
         public VideoCaptureDevice Cam = null;
 
+        public string TableName;
+        public int nameID;
         public frmDoctor()
-        {
+        { 
             InitializeComponent();
         }
         
@@ -39,6 +44,9 @@ namespace Clinic.PL
             frmAddName frm = new frmAddName();
             frm.ShowDialog();
             getRecord(Nam.getLastName());
+            gbVisit.Enabled = true;
+            panel7.Enabled = true;
+            dgGlobal.Enabled = true;
         }
 
         private void getRecord(DataTable dtName)
@@ -82,6 +90,105 @@ namespace Clinic.PL
         private void frmDoctor_FormClosing(object sender, FormClosingEventArgs e)
         {
             Cam.Stop();
+        }
+
+        private void dgGlobal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgProcessing_Click(object sender, EventArgs e)
+        {
+            TableName = "ProcessingKind";
+            DataTable dt = proc.AllProcessingKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "المعالجة";
+            
+        }
+
+        private void dgSickComplaint_Click(object sender, EventArgs e)
+        {
+            TableName = "SickComplaintKind";
+            DataTable dt = proc.AllSickComplaintKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "الشكاية المرضية";
+        }
+
+        private void dgMedicalExam_Click(object sender, EventArgs e)
+        {
+            TableName = "MedicalExamKind";
+            DataTable dt = proc.AllMedicalExamKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "الفحوص الطبية";
+        }
+
+        private void dgLaboratoryTest_Click(object sender, EventArgs e)
+        {
+            TableName = "LaboratoryTestKind";
+            DataTable dt = proc.AllLaboratoryTestKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "الفحوص المخبرية";
+        }
+
+        private void dgEcho_Click(object sender, EventArgs e)
+        {
+            TableName = "EchoKind";
+            DataTable dt = proc.AllEchoKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "الايكو";
+        }
+
+        private void dgInfertility_Click(object sender, EventArgs e)
+        {
+            TableName = "InfertilityKind";
+            DataTable dt = proc.AllInfertilityKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "العقم";
+        }
+
+        private void dgMedicine_Click(object sender, EventArgs e)
+        {
+            TableName = "MedicinesKind";
+            DataTable dt = proc.AllMedicinesKind();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "الادوية";
+            dgGlobal.Columns[2].HeaderText = "الجرعة";
+        }
+
+        private void dgDiagnostics_Click(object sender, EventArgs e)
+        {
+            TableName = "Diagnostics";
+            DataTable dt = proc.AllDiagnostics();
+            dgGlobal.DataSource = dt;
+            dgGlobal.Columns[0].HeaderText = "الرقم ";
+            dgGlobal.Columns[0].Visible = false;
+            dgGlobal.Columns[1].HeaderText = "التشخيص";
+        }
+
+        private void tsBtnSearch_Click(object sender, EventArgs e)
+        {
+
+            SearchName frm = new SearchName();
+            frm.ShowDialog();
+            
+            getRecord(Nam.getName(nameID));
+            gbVisit.Enabled = true;
+            panel7.Enabled = true;
+            dgGlobal.Enabled = true;
         }
     }
 }
